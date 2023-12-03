@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # 대문자 소문자 구분
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    url: jdbc:mysql://localhost:3306/restaurant?characterEncoding=UTF-8
+    username: fintech
+    password: fintech
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
